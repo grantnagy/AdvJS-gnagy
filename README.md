@@ -1,4 +1,4 @@
 # AdvJS-gnagy
-# Advanced Programming: JavaScript
+## Advanced Programming: JavaScript
 Spring-2020
 Grant Nagy
