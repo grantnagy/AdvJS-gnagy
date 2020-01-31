@@ -1,27 +1,25 @@
+// https://open.kattis.com/problems/different
+
 "use strict";
-const assert = require('assert').strict;
-
-var n, c;
-//n = length of message
-//c ints smaller than
-
+const assert = require("assert").strict;
 const readline = require('readline');
 
-function answer(numsarray)
+function answer(a,b)
 {
-    
-    for (var i of numsarray)
-    {
-        
-    }
-
+    let ans = Math.abs(a-b);
+    return ans;
 }
 
 function test()
 {
-    assert.strictEqual(answer([5, 2, 2, 1, 2, 1, 2]), [2, 2, 2, 1, 1], "fail");
-    assert.strictEqual(answer([4, 10, 2, 5, 9, 5]), [5, 5, 9, 2]);
-    console.log("test cases passed");
+    assert.strictEqual(answer(10, 12), 2);
+    assert.strictEqual(answer(71293781758123, 72784), 71293781685339);
+    assert.strictEqual(answer(1, 12345677654321), 12345677654320);
+    //my 3 custom test cases
+    assert.strictEqual(answer(100, 99), 1);
+    assert.strictEqual(answer(7200, 534), 6666);
+    assert.strictEqual(answer(2020, 82098), 80078);
+    console.log("all test cases passed!");
 }
 
 function kattis(){
@@ -33,28 +31,18 @@ function kattis(){
     var linenum =0;
 
     rl.on('line', (line) => {
-        if (linenum === 0){ 
-            
-            linenum++;}
-        else {
-            var strnums = line.split(" ");
-            var intnums = [];
-            for (let s of strnums)
-            {
-                intnums.push(parseInt(s));
-            }
-            console.log(answer(intnums));
-           rl.close();
-        }
+        var nums = line.split(' ');
+        var a = parseInt(nums[0]);
+        var b = parseInt(nums[1]);
+        console.log(answer(a,b));
+        rl.close();
     });
 }
 
 
 if (require.main == module) {
-    //console.log(process.argv);
     if (process.argv.length > 2 && process.argv[2] === 'test')
-    //node sort.js test
-        test();
+    test();
     else
-        kattis();
+    kattis();
 }
