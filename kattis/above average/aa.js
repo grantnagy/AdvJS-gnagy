@@ -6,23 +6,22 @@ const readline = require('readline');
 
 function answer(line)
 {
-    let nums = line.split(" ");
-    let ans = 0;
+    let answer = 0;
     let average = 0;
+    let nums = line.split(' ');
 
     for (var i in nums)
     {
         if (parseInt(nums[i]) >= 80) average++;
     }
-    console.log(average);
-    console.log(parseInt(nums[0]));
+
     average = average / parseInt(nums[0]);
     ans = 100* average.toPrecision(5) + '%';
-    return ans;
+    return answer;
 }
 function test()
 {
-    assert.strictEqual(answer(5, 50, 50, 70, 80, 100), 40.000);
+    assert.strictEqual(answer(5, 50, 50, 70, 80, 100), '40.000%');
     console.log("all test cases passed!");
 }
 function kattis(){
@@ -31,23 +30,25 @@ function kattis(){
         output: process.stdout
     });
 
-    let lineNum = 1;
-
-   /* rl.on("line", line => {
-        if (lineNum == 1) { 
-            let testcases = line.split(" ");
-            lineNum++; 
-        }
-        for (var i = 0; i <= parseInttestcases[0]; i++) console.log(answer(line));
-    });
-    */
-   rl.on("line", line => {
-    if (lineNum == 1) lineNum++; 
-    else {
-        console.log(answer(line));
-        rl.close();
+  let lineNum = 0;
+  let ans = []
+  let totalLines = 0;
+  rl.on('line', (line) => {
+    if (lineNum == 0) {
+      lineNum++;
+      totalLines = parseInt(line);
     }
-});
+    //else console.log(answer(line));
+    else {
+      lineNum++; 
+      ans.push(answer(line));
+    }
+    //console.log(lineNum);
+    // print result once when all the results are collected
+    if (lineNum == totalLines+1)
+      console.log(ans.join("\n"));
+  });
+
 }
 
 
