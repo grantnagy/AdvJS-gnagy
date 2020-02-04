@@ -50,7 +50,8 @@ function kattis(){
       ans.push(answer(line));
     }
     if (lineNum == totalLines+1)
-      {console.log(ans.join("\n"));
+      {
+      console.log(ans.join("\n"));
       rl.close();
       }
   });
