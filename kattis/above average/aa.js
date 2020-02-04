@@ -15,13 +15,13 @@ function answer(line)
         if (parseInt(nums[i]) >= 80) average++;
     }
 
-    average = average / parseInt(nums[0]);
-    ans = 100* average.toPrecision(5) + '%';
-    return answer;
+    average /= parseInt(nums[0]);
+    answer = 100* average.toFixed(3);
+    return answer.toPrecision(5)+'%';
 }
 function test()
 {
-    assert.strictEqual(answer(5, 50, 50, 70, 80, 100), '40.000%');
+    assert.strictEqual(answer("5 50 50 70 80 100"), '40.000%');
     console.log("all test cases passed!");
 }
 function kattis(){
@@ -46,11 +46,11 @@ function kattis(){
     //console.log(lineNum);
     // print result once when all the results are collected
     if (lineNum == totalLines+1)
-      console.log(ans.join("\n"));
+      {console.log(ans.join("\n"));
+      rl.close();}
   });
 
 }
-
 
 if (require.main == module) {
     if (process.argv.length > 2 && process.argv[2] === 'test')
