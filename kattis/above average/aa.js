@@ -47,7 +47,7 @@ function kattis(){
     // print result once when all the results are collected
     if (lineNum == totalLines+1)
       {console.log(ans.join("\n"));
-      rl.close();}
+      }
   });
 
 }
