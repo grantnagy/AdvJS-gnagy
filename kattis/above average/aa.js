@@ -18,9 +18,12 @@ function answer(line)
  
     average = total / n;
 
-    for (var i in nums) if (parseInt(nums[i]) > average) count++;
+    for (var i in nums) {
+      if (parseInt(nums[i]) > average) ++count;
+    }
     answer = 100* count/n;
-    return answer.toPrecision(5)+'%';
+    if (count != 0 ) return answer.toFixed(3)+'%';
+    else return answer.toFixed(3)+'%';
 }
 function test()
 {
@@ -29,6 +32,7 @@ function test()
     assert.strictEqual(answer("3 70 90 80"), '33.333%');
     assert.strictEqual(answer("3 70 90 81"), '66.667%');
     assert.strictEqual(answer("9 100 99 98 97 96 95 94 93 91"), '55.556%');
+    assert.strictEqual(answer("1 100"), '0.000%');
     console.log("all test cases passed!");
 }
 function kattis(){
