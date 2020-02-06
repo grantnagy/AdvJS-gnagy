@@ -19,5 +19,5 @@ https://open.kattis.com/problems/aboveaverage
 
 ![kattis2](screenshot2.PNG)
 
-Grade 1: 100%
+Grade 2: 100%
 ***
