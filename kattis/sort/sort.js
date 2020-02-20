@@ -8,13 +8,23 @@ function answer(line)
 {
     let nums = line.split(" ");
     let n = nums.length;
-    for (var i in nums) parseInt(nums[i]);
-    nums.sort();
-    return answer;
+    let freq = {}, value;
+    for (var i = 0; i < n; i++) {
+      value = nums[i];
+      if (value in freq) freq[value]++;
+      else freq[value] = 1;
+    }
+
+    function compareFreq(a, b) {
+      return freq[b] - freq[a];
+  }
+    nums.sort(compareFreq);
+    return nums.toString().replace(/,/g, " ");
 }
 function test()
 {
-    assert.strictEqual(answer("180 141 174 143 142 175"), '141-143 174 175 180');
+    assert.strictEqual(answer("2 1 2 1 2"), '2 2 2 1 1');
+    assert.strictEqual(answer("11 33 11 77 54 11 25 25 33"), '11 11 11 33 33 25 25 77 54');
     console.log("all test cases passed!");
 }
 function kattis(){
@@ -25,11 +35,11 @@ function kattis(){
 
   let lineNum = 0;
   let ans = []
-  let seeds = 0;
+  let n = 0;
   rl.on('line', (line) => {
     if (lineNum == 0) {
       lineNum++;
-      seeds = parseInt(line);
+      n = parseInt(line);
     }
     else {
       lineNum++; 
