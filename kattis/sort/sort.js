@@ -1,4 +1,4 @@
-// https://open.kattis.com/problems/busnumbers
+// https://open.kattis.com/problems/sort
 
 "use strict";
 const assert = require("assert").strict;
@@ -14,17 +14,23 @@ function answer(line)
       if (value in freq) freq[value]++;
       else freq[value] = 1;
     }
+    for (var x in freq) {
+      console.log(freq);
+      if (freq[x] == freq[x+1]) freq[x] += 2;
+    }
+    console.log(freq);
 
-    function compareFreq(a, b) {
-      return freq[b] - freq[a];
-  }
+     function compareFreq(a, b) {
+     return freq[b] - freq[a];
+   }
     nums.sort(compareFreq);
     return nums.toString().replace(/,/g, " ");
 }
 function test()
 {
-    assert.strictEqual(answer("2 1 2 1 2"), '2 2 2 1 1');
-    assert.strictEqual(answer("11 33 11 77 54 11 25 25 33"), '11 11 11 33 33 25 25 77 54');
+    //assert.strictEqual(answer("2 1 2 1 2"), '2 2 2 1 1');
+    assert.strictEqual(answer("1 3 3 3 2 2 2 1 1"), '1 1 1 3 3 3 2 2 2');
+    //assert.strictEqual(answer("11 33 11 77 54 11 25 25 33"), '11 11 11 33 33 25 25 77 54');
     console.log("all test cases passed!");
 }
 function kattis(){
