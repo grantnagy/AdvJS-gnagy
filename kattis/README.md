@@ -13,7 +13,7 @@ Final Grade 100%
 ### Difficulty: 2.0
 https://open.kattis.com/problems/akcija
 
-[Different Problem: Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/Akcija/Akcija.js)
+[Akcija: My Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/Akcija/Akcija.js)
 
 ![kattis0](Capture.PNG)
 
@@ -23,7 +23,7 @@ https://open.kattis.com/problems/akcija
 ### Difficulty: 2.3
 https://open.kattis.com/problems/different
 
-[Different Problem: Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/Different/different.js)
+[Different Problem: My Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/Different/different.js)
 
 ![kattis1](screenshot1.PNG)
 
@@ -33,7 +33,7 @@ https://open.kattis.com/problems/different
 ### Difficulty: 2.2
 https://open.kattis.com/problems/aboveaverage
 
-[Different Problem: Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/above%20average/aa.js)
+[Above Average: My Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/above%20average/aa.js)
 
 ![kattis2](screenshot2.PNG)
 
