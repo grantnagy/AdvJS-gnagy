@@ -14,12 +14,6 @@ function answer(line)
       if (value in freq) freq[value]++;
       else freq[value] = 1;
     }
-    for (var x in freq) {
-      console.log(freq);
-      if (freq[x] == freq[x+1]) freq[x] += 2;
-    }
-    console.log(freq);
-
      function compareFreq(a, b) {
      return freq[b] - freq[a];
    }
