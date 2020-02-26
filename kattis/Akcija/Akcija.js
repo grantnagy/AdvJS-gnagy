@@ -11,9 +11,7 @@ function answer(ans)
     let answer = 0;
     for(var i in ans)
     {
-      if (i % 3 != 2) {
-        answer += ans[i];
-      }
+      if (i % 3 != 2) answer += ans[i];
     }
     return answer;
 }
