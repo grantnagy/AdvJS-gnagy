@@ -1,5 +1,16 @@
 # Kattis Problems
 
+## Akcija
+### Difficulty: 2.0
+https://open.kattis.com/problems/akcija
+
+[Different Problem: Source Code](https://github.com/grantnagy/AdvJS-gnagy/blob/master/kattis/Akcija/Akcija.js)
+
+![kattis0](Capture.PNG)
+
+Grade 1: 100%
+***
+
 ## A Different Problem
 ### Difficulty: 2.3
 https://open.kattis.com/problems/different
