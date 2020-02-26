@@ -17,7 +17,6 @@ https://open.kattis.com/problems/akcija
 
 ![kattis0](Capture.PNG)
 
-Grade 1: 100%
 ***
 
 ## A Different Problem
@@ -28,7 +27,6 @@ https://open.kattis.com/problems/different
 
 ![kattis1](screenshot1.PNG)
 
-Grade 2: 100%
 ***
 
 ## Above Average
@@ -39,5 +37,4 @@ https://open.kattis.com/problems/aboveaverage
 
 ![kattis2](screenshot2.PNG)
 
-Grade 3: 100%
 ***
