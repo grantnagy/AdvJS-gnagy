@@ -16,4 +16,4 @@
 
 | Assignment | Due Date | Done | Location | Notes |
 |-----------:|:--------:|:----:|:---------|:------|
-| 1 - Kattis  | 2-11-20 |  ☐   | [src and tests](https://github.com/grantnagy/AdvJS-gnagy/tree/master/kattis) | WIP |
+| 1 - Kattis  | 3-3-20 |  ✅   | [Source and Screenshots](https://github.com/grantnagy/AdvJS-gnagy/tree/master/kattis) | Done |
