@@ -1,5 +1,14 @@
 # Kattis Problems
 
+| Problens        | Difficulty           | Grade  |
+| ------------- |:-------------:| -----:|
+| Akcija    | 2.0 | 100% |
+| A Different Problem  | 2.3 |   100% |
+| Above Average | 2.2  |    100% |
+
+Final Grade 100%
+
+
 ## Akcija
 ### Difficulty: 2.0
 https://open.kattis.com/problems/akcija
@@ -19,7 +28,7 @@ https://open.kattis.com/problems/different
 
 ![kattis1](screenshot1.PNG)
 
-Grade 1: 100%
+Grade 2: 100%
 ***
 
 ## Above Average
@@ -30,5 +39,5 @@ https://open.kattis.com/problems/aboveaverage
 
 ![kattis2](screenshot2.PNG)
 
-Grade 2: 100%
+Grade 3: 100%
 ***
