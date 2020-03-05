@@ -1,0 +1,10 @@
+body {
+	margin: 0;
+	background-color:  #161616;
+    font-family: 'Raleway', sans-serif;
+    color: #d6d6d6;
+    text-decoration: none;
+}
+.image {
+    padding-left: 50px;
+}
