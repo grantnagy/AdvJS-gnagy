@@ -38,6 +38,7 @@
             $('.one').html(one);
             $('.two').html(two);
             $('.three').html(three);
+
             if (one != two || one != three || two != three) {
                  money--;
                 $('.status').html('You lost.')
@@ -46,10 +47,16 @@
                  money += 5;
                  $('.status').html('You won the jackpot!')
             }
-            if (one == two || one == three || two == three) {
+            if (one == two || two == three) {
                  money++;
                  $('.status').html('You win!')
             }
+            if (one == 3 & two == 3 & three == 3) {
+                 money += 333;
+                 $('.status').html('You have won the lucky three.')
+            }
+
+
             $('.money').html(money);
 
             if (money == 0) loss();
