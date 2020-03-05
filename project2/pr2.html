@@ -12,25 +12,57 @@
         var cost = 20;
         
         function setup() {
-            money = 100;
-            playgame();
+            money = 10;
+            one = 0;
+            two = 0;
+            three= 0;
+            $('.money').html(money);
+            $('.one').html(one);
+            $('.two').html(two);
+            $('.three').html(three);
+            $('.status').html('Good luck, have fun.');
+
             
       }
+      function test() {
+          if (money != 0) playgame();
+          else {
+            $('.status').html('You have no credits. Press reset to try again.')
+          }
+      }
       function playgame() {
+
             one = Math.ceil(Math.random()*5);
             two = Math.ceil(Math.random()*5);
             three = Math.ceil(Math.random()*5);
             $('.one').html(one);
             $('.two').html(two);
             $('.three').html(three);
-            if (one != two || one != three || two != three) money - 20;
+            if (one != two || one != three || two != three) {
+                 money--;
+                $('.status').html('You lost.')
+            }
+            if (one == two && one == three && two == three) {
+                 money += 5;
+                 $('.status').html('You won the jackpot!')
+            }
+            if (one == two || one == three || two == three) {
+                 money++;
+                 $('.status').html('You win!')
+            }
             $('.money').html(money);
+
+            if (money == 0) loss();
+
+            function loss() {
+                $('.status').html('You lost, click reset to try again.')
+            }
       }
     </script>
     <script>
         $(function (){
         $("#btnspin").click(function () {
-          playgame();
+          test();
         });
         $("#reset").click(function() {
           setup();
@@ -51,6 +83,8 @@
         <hr>
         <input type="button" value="Spin" id="btnspin">
         <input type="reset" value="Reset" id="reset">
+        <br><br>
+        <span class="status"></span>
         <p>Click Spin to Start. Costs 20 Credits.</p>
     </body>
 </html>
