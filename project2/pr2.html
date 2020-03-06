@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <title>Slots Game by Grant</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         var one, two, three;
         var money;
-        var cost = 20;
         
         function setup() {
             money = 10;
@@ -44,7 +44,7 @@
                 $('.status').html('You lost.')
             }
             if (one == two && one == three && two == three) {
-                 money += 5;
+                 money += 10;
                  $('.status').html('You won the jackpot!')
             }
             if (one == two || two == three) {
@@ -82,16 +82,20 @@
         
     </style>
     <body>
+      <div class="text-center">
         <body onload="setup()">
+         
         <img src="slots.gif" class="image">
+
         <p>Number of Credits: <span class="money"></span></p>
         <hr>
         <span class="one"></span>   <span class="two"></span>   <span class="three"></span>
         <hr>
-        <input type="button" value="Spin" id="btnspin">
-        <input type="reset" value="Reset" id="reset">
+        <button type="button" class="btn btn-primary btn-lg" id="btnspin">Spin</button>
+        <button type="button" class="btn btn-danger btn-lg" id="reset">Reset</button>
         <br><br>
         <span class="status"></span>
-        <p>Click Spin to Start. Costs 20 Credits.</p>
+        <p>Click Spin to Start. Costs 1 Credit.</p>
+      </div>
     </body>
 </html>
