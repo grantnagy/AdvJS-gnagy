@@ -22,11 +22,14 @@
             document.getElementById("img2").src = "Designs/start.png";
             document.getElementById("img3").src = "Designs/start.png";
             $('.statustext').html('')
-
+            document.getElementById("status").src = "Designs/GL.png"
             
       }
       function test() {
-          if (money != 0) playgame();
+          if (money != 0) {
+            rolling();
+            setTimeout(playgame, 1500);
+          }
           else {
             $('.status').html('You have no credits. Press reset to try again.')
           }
@@ -75,7 +78,12 @@
         if (value == 3) document.getElementById(order).src = "Designs/3.png";
         if (value == 4) document.getElementById(order).src = "Designs/4.png";
         if (value == 5) document.getElementById(order).src = "Designs/5.png";
-
+      }
+      function rolling(){
+        document.getElementById("img1").src = "Designs/rolling.gif";
+        document.getElementById("img2").src = "Designs/rolling.gif";
+        document.getElementById("img3").src = "Designs/rolling.gif";
+        document.getElementById("status").src = "Designs/GL.png"
       }
     </script>
     <script>
