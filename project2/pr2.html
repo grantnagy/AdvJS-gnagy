@@ -18,10 +18,9 @@
             one = 0;
             two = 0;
             three= 0;
-            $('.money').html(money);
-            $('.one').html(one);
-            $('.two').html(two);
-            $('.three').html(three);
+            document.getElementById("img1").src = "start.png";
+            document.getElementById("img2").src = "start.png";
+            document.getElementById("img3").src = "start.png";
             $('.status').html('Good luck, have fun.');
 
             
@@ -37,9 +36,10 @@
             one = Math.ceil(Math.random()*5);
             two = Math.ceil(Math.random()*5);
             three = Math.ceil(Math.random()*5);
-            $('.one').html(one);
-            $('.two').html(two);
-            $('.three').html(three);
+            convert(one,"img1");
+            convert(two, "img2");
+            convert(three, "img3");
+
 
             if (one != two || one != three || two != three) {
                  money--;
@@ -51,7 +51,7 @@
             }
             if (one == two || two == three) {
                  money++;
-                 $('.status').html('You win!')
+                 $('.status').html('Push')
             }
             if (one == 3 & two == 3 & three == 3) {
                  money += 333;
@@ -66,6 +66,15 @@
             function loss() {
                 $('.status').html('You lost, click reset to try again.')
             }
+
+      }
+      function convert(value, order)
+      {
+        if (value == 1) document.getElementById(order).src = "1.png";
+        if (value == 2) document.getElementById(order).src = "2.png";
+        if (value == 3) document.getElementById(order).src = "3.png";
+        if (value == 4) document.getElementById(order).src = "4.png";
+        if (value == 5) document.getElementById(order).src = "5.png";
 
       }
     </script>
@@ -88,17 +97,15 @@
       <div class="text-center">
         <body onload="setup()">
          
-        <img src="slots.gif" class="image">
-
-        <p>Number of Credits: <span class="money"></span></p>
-        <hr>
-        <span class="one"></span>   <span class="two"></span>   <span class="three"></span>
+          <img id="title" src="back.png">
+        <img id="img1" src="start.png"> <img id="img2" src="start.png"> <img id="img3" src="start.png">
         <hr>
         <button type="button" class="btn btn-primary btn-lg" id="btnspin">Spin</button>
         <button type="button" class="btn btn-danger btn-lg" id="reset">Reset</button>
         <br><br>
         <span class="status"></span>
         <p>Click Spin to Start. Costs 1 Credit.</p>
+        <p>Number of Credits: <span class="money"></span></p>
         <hr>
         <h2>Rules of the Game</h2>
         <ul class="list-inline mx-auto justify-content-center"></ul>
