@@ -18,10 +18,10 @@
             one = 0;
             two = 0;
             three= 0;
-            document.getElementById("img1").src = "start.png";
-            document.getElementById("img2").src = "start.png";
-            document.getElementById("img3").src = "start.png";
-            $('.status').html('Good luck, have fun.');
+            document.getElementById("img1").src = "Designs/start.png";
+            document.getElementById("img2").src = "Designs/start.png";
+            document.getElementById("img3").src = "Designs/start.png";
+            $('.statustext').html('')
 
             
       }
@@ -43,19 +43,19 @@
 
             if (one != two || one != three || two != three) {
                  money--;
-                $('.status').html('You lost.')
+                 document.getElementById("status").src = "Designs/LOST.png"
             }
             if (one == two && one == three && two == three) {
                  money += 10;
-                 $('.status').html('You won the jackpot!')
+                 document.getElementById("status").src = "Designs/WIN.png"
             }
             if (one == two || two == three) {
                  money++;
-                 $('.status').html('Push')
+                 document.getElementById("status").src = "Designs/PUSH.png"
             }
-            if (one == 3 & two == 3 & three == 3) {
-                 money += 333;
-                 $('.status').html('You have won the lucky three.')
+            if (one == 5 & two == 5 & three == 5) {
+                 money += 1200;
+                 document.getElementById("status").src = "Designs/jackpot.png"
             }
 
 
@@ -64,17 +64,17 @@
             if (money == 0) loss();
 
             function loss() {
-                $('.status').html('You lost, click reset to try again.')
+                $('.statustext').html('You lost, click reset to try again.')
             }
 
       }
       function convert(value, order)
       {
-        if (value == 1) document.getElementById(order).src = "1.png";
-        if (value == 2) document.getElementById(order).src = "2.png";
-        if (value == 3) document.getElementById(order).src = "3.png";
-        if (value == 4) document.getElementById(order).src = "4.png";
-        if (value == 5) document.getElementById(order).src = "5.png";
+        if (value == 1) document.getElementById(order).src = "Designs/1.png";
+        if (value == 2) document.getElementById(order).src = "Designs/2.png";
+        if (value == 3) document.getElementById(order).src = "Designs/3.png";
+        if (value == 4) document.getElementById(order).src = "Designs/4.png";
+        if (value == 5) document.getElementById(order).src = "Designs/5.png";
 
       }
     </script>
@@ -96,14 +96,15 @@
     <body>
       <div class="text-center">
         <body onload="setup()">
-         
-          <img id="title" src="back.png">
-        <img id="img1" src="start.png"> <img id="img2" src="start.png"> <img id="img3" src="start.png">
-        <hr>
+        <img id="title" src="Designs/back.png"> <br>
+        <img id="img1" src="Designs/start.png"> <img id="img2" src="Designs/start.png"> <img id="img3" src="Designs/start.png">
+        <br>
+        <img id="status" src="Designs/GL.png">
+        <br>
         <button type="button" class="btn btn-primary btn-lg" id="btnspin">Spin</button>
         <button type="button" class="btn btn-danger btn-lg" id="reset">Reset</button>
         <br><br>
-        <span class="status"></span>
+        <span class="statustext"></span>
         <p>Click Spin to Start. Costs 1 Credit.</p>
         <p>Number of Credits: <span class="money"></span></p>
         <hr>
