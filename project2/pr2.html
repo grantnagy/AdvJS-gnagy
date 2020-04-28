@@ -15,6 +15,7 @@
         
         function setup() {
             money = 10;
+            $('.money').html(money);
             one = 0;
             two = 0;
             three= 0;
@@ -28,7 +29,7 @@
       function test() {
           if (money != 0) {
             rolling();
-            setTimeout(playgame, 1500);
+            setTimeout(playgame, 900);
           }
           else {
             $('.status').html('You have no credits. Press reset to try again.')
@@ -49,10 +50,10 @@
                  document.getElementById("status").src = "Designs/LOST.png"
             }
             if (one == two && one == three && two == three) {
-                 money += 10;
+                 money += 20;
                  document.getElementById("status").src = "Designs/WIN.png"
             }
-            if (one == two || two == three) {
+            if ((one == two && one != three) || (two == three && one != three)) {
                  money++;
                  document.getElementById("status").src = "Designs/PUSH.png"
             }
@@ -120,10 +121,10 @@
         <ul class="list-inline mx-auto justify-content-center"></ul>
         <li>To start, you get <b>10</b> credits.</li>
         <li>Each spin costs <b>1</b> credit.</li>
-        <li>To win, get three like values. Win is 10 credits.</li>
+        <li>To win, get three like values. Win is <b>20</b> credits.</li>
         <li>To push, get two like values next to eachother.</li>
-        <li>Easter Egg: Get three '3's and win 333 credits.</li>
-        <li>Values range from 1 to 5.</li>
+        <li>Easter Egg: Get three stimulus checks and win <b>1200</b> credits.</li>
+        <li>There are 5 different values.</li>
       </ul>
       </div>
     </body>
