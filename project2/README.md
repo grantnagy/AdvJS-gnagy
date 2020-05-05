@@ -2,7 +2,7 @@
 For project 2 I created a slot machine game.
 This project is hosted on my website [here.](https://grantnagy.github.io/pr2.html)
 This project utilizes html, css, bootstrap 4.0.0, javascript, and jQuery.
-The game is responsive/mobile friendly, and all images were designed by myself with the psd files included.
+The game is responsive/mobile friendly, and all images were designed by myself with the psd files included in the repo.
 
 
 ## How the game is contructed
@@ -10,10 +10,10 @@ When the spin button is pressed, there is a random generation of three numbers w
 
 
 ### Rules of the Game
-To start, you get 10 credits.
-Each spin costs 1 credit.
-To win, get three like values. Win is 20 credits.
-To push, get two like values next to eachother.
-Easter Egg: Get three stimulus checks and win 1200 credits.
-There are 5 different values.
-A green check symbolizes a win or push. Red X symbolizes a loss. Three $$$ symbolizes a jackpot.
+To start, you get 10 credits.  
+Each spin costs 1 credit.  
+To win, get three like values. Win is 20 credits.  
+To push, get two like values next to eachother.  
+Easter Egg: Get three stimulus checks and win 1200 credits.  
+There are 5 different values.  
+A green check symbolizes a win or push. Red X symbolizes a loss. Three $$$ symbolizes a jackpot.  
