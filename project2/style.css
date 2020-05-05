@@ -1,22 +1,4 @@
 
-.image {
-    padding-left: 40px !important;
-    padding-bottom: 30px !important;
-}
-.two {
-    margin-left: 40px;
-    font-weight: bold !important;
-    font-size: 90px !important;
-}
-.three {
-    margin-left: 40px;
-    font-weight: bold !important;
-    font-size: 90px !important;
-}
-.one {
-    font-weight: bold !important;
-    font-size: 90px !important;
-}
 p
 {
     font-weight: bold !important;
@@ -30,8 +12,29 @@ p
 .money {
     color: #ff4242;
 }
-#img1{position: relative;}
-#img2{position: relative;}
-#img3{position: relative;}
+#img1{position: relative;
+    width: 33%;
+    height: auto;}
+#img2{position: relative;
+    width: 33%;
+    height: auto;}
+#img3{position: relative;
+    width: 33%;
+    height: auto;}
 #title{width: 100%;
        height: auto;}
+#status{width: 100%;
+        height: auto;}
+
+/* For phones: */
+@media only screen and (max-width: 600px) {
+    #img1{position: relative;
+        width: 100%;
+        height: auto;}
+    #img2{position: relative;
+        width: 100%;
+        height: auto;}
+    #img3{position: relative;
+        width: 100%;
+        height: auto;}
+    }

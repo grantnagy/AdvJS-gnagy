@@ -27,12 +27,13 @@
             
       }
       function test() {
-          if (money != 0) {
+          if (money > 0) {
             rolling();
             setTimeout(playgame, 900);
           }
           else {
             $('.status').html('You have no credits. Press reset to try again.')
+            $("#btnspin").removeAttr('disabled');
           }
       }
       function playgame() {
@@ -47,15 +48,15 @@
 
             if (one != two || one != three || two != three) {
                  money--;
-                 document.getElementById("status").src = "Designs/LOST.png"
+                 document.getElementById("status").src = "Designs/loss.png"
             }
             if (one == two && one == three && two == three) {
                  money += 20;
-                 document.getElementById("status").src = "Designs/WIN.png"
+                 document.getElementById("status").src = "Designs/win.png"
             }
             if ((one == two && one != three) || (two == three && one != three)) {
                  money++;
-                 document.getElementById("status").src = "Designs/PUSH.png"
+                 document.getElementById("status").src = "Designs/win.png"
             }
             if (one == 5 & two == 5 & three == 5) {
                  money += 1200;
@@ -69,6 +70,7 @@
 
             function loss() {
                 $('.statustext').html('You lost, click reset to try again.')
+                
             }
 
       }
@@ -89,9 +91,16 @@
     </script>
     <script>
         $(function (){
-        $("#btnspin").click(function () {
-          test();
-        });
+          var enableSubmit = function(ele) {
+          $(ele).removeAttr("disabled");
+          }
+
+          $("#btnspin").click(function() {
+            test();
+          var that = this;
+          $(this).attr("disabled", true);
+          setTimeout(function() { enableSubmit(that) }, 1000);
+});
         $("#reset").click(function() {
           setup();
           $("#btnspin").removeAttr('disabled');
@@ -105,7 +114,7 @@
     <body>
       <div class="text-center">
         <body onload="setup()">
-        <img id="title" src="Designs/back.png"> <br>
+        <img id="title" src="Designs/top.png"> <br>
         <img id="img1" src="Designs/start.png"> <img id="img2" src="Designs/start.png"> <img id="img3" src="Designs/start.png">
         <br>
         <img id="status" src="Designs/GL.png">
