@@ -3,4 +3,4 @@
 ### Grant Nagy
 ### Spring-2020
 
-# Final Project [Source and Files](https://github.com/grantnagy/AdvJS-gnagy/tree/master/project2) | Done |
+# [Final Project](https://github.com/grantnagy/AdvJS-gnagy/tree/master/project2)
