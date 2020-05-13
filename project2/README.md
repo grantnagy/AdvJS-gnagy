@@ -1,4 +1,6 @@
 # Project 2 / Final Project
+Solo Project by Grant Nagy
+
 For project 2 I created a slot machine game.
 This project is hosted on my website [here.](https://grantnagy.github.io/pr2.html)
 This project utilizes html, css, bootstrap 4.0.0, javascript, and jQuery.
